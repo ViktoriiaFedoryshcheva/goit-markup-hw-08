@@ -1,0 +1,14 @@
+.filters .container {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.filters__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filters__name:not(:last-child) {
+	margin-right: 8px;
+}
