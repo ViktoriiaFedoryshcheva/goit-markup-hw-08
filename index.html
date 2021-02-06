@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
-		<header class="header">
+		<!-- <header class="header">
 			<div class="container">
 				<nav class="navigation">
 					<a class="logo link" href="/index.html" lang="en">
@@ -50,10 +50,11 @@
 					</a>
 				</address>
 			</div>
-		</header>
+		</header> -->
 		<main>
 			<!---HERO-->
-			<section class="hero">
+
+			<section class="hero container">
 				<h1 class="hero__title">
 					Эффективные решения
 					<br />
@@ -63,56 +64,56 @@
 			</section>
 
 			<!---Особенности-->
-			<section class="features">
-				<div class="container">
-					<h2 class="features__title visually-hidden">Особенности</h2>
-					<ul class="features__list list">
-						<li class="features__list__item icon-antenna">
-							<div class="features__item-pic">
-								<svg class="features__pic">
-									<use href="./images_svg/sprite.svg#antenna"></use>
-								</svg>
-							</div>
-							<h3 class="features__item-title">Внимание к деталям</h3>
-							<p class="features__item-description">
-								Идейные соображения, а также начало повседневной работы по формированию позиции.
-							</p>
-						</li>
-						<li class="features__list__item icon-clock">
-							<div class="features__item-pic">
-								<svg class="features__pic">
-									<use href="./images_svg/sprite.svg#clock"></use>
-								</svg>
-							</div>
-							<h3 class="features__item-title">Пунктуальность</h3>
-							<p class="features__item-description">
-								Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-							</p>
-						</li>
-						<li class="features__list__item icon-diagram">
-							<div class="features__item-pic">
-								<svg class="features__pic">
-									<use href="./images_svg/sprite.svg#diagram"></use>
-								</svg>
-							</div>
-							<h3 class="features__item-title">Планирование</h3>
-							<p class="features__item-description">
-								Равным образом консультация с широким активом в значительной степени обуславливает.
-							</p>
-						</li>
-						<li class="features__list__item icon-astronaut">
-							<div class="features__item-pic">
-								<svg class="features__pic">
-									<use href="./images_svg/sprite.svg#astronaut"></use>
-								</svg>
-							</div>
-							<h3 class="features__item-title">Современные технологии</h3>
-							<p class="features__item-description">
-								Значимость этих проблем настолько очевидна, что реализация плановых заданий.
-							</p>
-						</li>
-					</ul>
-				</div>
+			<section class="features container">
+				<!-- <div class="container"> -->
+				<h2 class="features__title visually-hidden">Особенности</h2>
+				<ul class="features__list list">
+					<li class="features__list__item icon-antenna">
+						<div class="features__item-pic">
+							<svg class="features__pic">
+								<use href="./images_svg/sprite.svg#antenna"></use>
+							</svg>
+						</div>
+						<h3 class="features__item-title">Внимание к деталям</h3>
+						<p class="features__item-description">
+							Идейные соображения, а также начало повседневной работы по формированию позиции.
+						</p>
+					</li>
+					<li class="features__list__item icon-clock">
+						<div class="features__item-pic">
+							<svg class="features__pic">
+								<use href="./images_svg/sprite.svg#clock"></use>
+							</svg>
+						</div>
+						<h3 class="features__item-title">Пунктуальность</h3>
+						<p class="features__item-description">
+							Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+						</p>
+					</li>
+					<li class="features__list__item icon-diagram">
+						<div class="features__item-pic">
+							<svg class="features__pic">
+								<use href="./images_svg/sprite.svg#diagram"></use>
+							</svg>
+						</div>
+						<h3 class="features__item-title">Планирование</h3>
+						<p class="features__item-description">
+							Равным образом консультация с широким активом в значительной степени обуславливает.
+						</p>
+					</li>
+					<li class="features__list__item icon-astronaut">
+						<div class="features__item-pic">
+							<svg class="features__pic">
+								<use href="./images_svg/sprite.svg#astronaut"></use>
+							</svg>
+						</div>
+						<h3 class="features__item-title">Современные технологии</h3>
+						<p class="features__item-description">
+							Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+						</p>
+					</li>
+				</ul>
+				<!-- </div> -->
 			</section>
 
 			<!--Чем мы занимаемся-->
@@ -121,15 +122,49 @@
 					<h2 class="about__title">Чем мы занимаемся</h2>
 					<ul class="about__list list">
 						<li class="about__img">
-							<img src="./images/box_1.jpg" alt="box_1" width="370" />
+							<picture class="about__img-picture">
+								<source
+									srcset="./images/about/box1.webp x1, ./images/about/box1-@2x.webp x2"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="./images/about/box1.jpg x1, ./images/about/box1-@2x.jpg x2"
+									media="(min-width: 1200px)"
+								/>
+								<img src="./images/about/box1.jpg" alt="box1" />
+							</picture>
+
 							<p class="label">Десктопные приложения</p>
 						</li>
 						<li class="about__img">
-							<img src="./images/box_2.jpg" alt="box_2" width="370" />
+							<picture class="about__img-picture">
+								<source
+									srcset="./images/about/box12.webp x1, ./images/about/box2-@2x.webp x2"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="./images/about/box2.jpg x1, ./images/about/box2-@2x.jpg x2"
+									media="(min-width: 1200px)"
+								/>
+								<img src="./images/about/box2.jpg" alt="box2" />
+							</picture>
 							<p class="label">Мобильные приложения</p>
 						</li>
 						<li class="about__img">
-							<img src="./images/box_3.jpg" alt="box_3" width="370" />
+							<picture class="about__img-picture">
+								<source
+									srcset="./images/about/box3.webp x1, ./images/about/box3-@2x.webp x2"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="./images/about/box3.jpg x1, ./images/about/box3-@2x.jpg x2"
+									media="(min-width: 1200px)"
+								/>
+								<img src="./images/about/box3.jpg" alt="box3" />
+							</picture>
 							<p class="label">Дизайнерские решения</p>
 						</li>
 					</ul>
@@ -137,171 +172,294 @@
 			</section>
 
 			<!--Наша команда-->
-			<section class="our_team">
-				<h2 class="our_team__title">Наша команда</h2>
-				<div class="container">
-					<ul class="our_team__list list">
-						<li class="our_team__item">
-							<img class="our_team__img" src="./images/demjanenko.jpg" alt="Игорь Демьяненко (фото)" width="270" />
-							<h3 class="our_team__person">Игорь Демьяненко</h3>
-							<p class="our_team__profession" lang="en">Product Designer</p>
-							<ul class="social-list list">
-								<li class="social_item icon-instagram">
-									<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-twitter">
-									<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#twitter"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-facebook">
-									<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-linkedin">
-									<a
-										class="link-social"
-										href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
-										aria-label="linkedin"
-									>
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#linkedin"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="our_team__item">
-							<img class="our_team__img" src="./images/repina.jpg" alt="Ольга Репина (фото)" width="270" />
-							<h3 class="our_team__person">Ольга Репина</h3>
-							<p class="our_team__profession" lang="en">Frontend Developer</p>
-							<ul class="social-list list">
-								<li class="social_item icon-instagram">
-									<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-twitter">
-									<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#twitter"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-facebook">
-									<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-linkedin">
-									<a
-										class="link-social"
-										href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
-										aria-label="linkedin"
-									>
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#linkedin"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="our_team__item">
-							<img class="our_team__img" src="./images/tarasov.jpg" alt="Николай Тарасов (фото)" width="270" />
-							<h3 class="our_team__person">Николай Тарасов</h3>
-							<p class="our_team__profession" lang="en">Marketing</p>
-							<ul class="social-list list">
-								<li class="social_item icon-instagram">
-									<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-twitter">
-									<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#twitter"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-facebook">
-									<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-linkedin">
-									<a
-										class="link-social"
-										href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
-										aria-label="linkedin"
-									>
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#linkedin"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="our_team__item">
-							<img class="our_team__img" src="./images/ermakov.jpg" alt="Михаил Ермаков (фото)" width="270" />
-							<h3 class="our_team__person">Михаил Ермаков</h3>
-							<p class="our_team__profession" lang="en">UI Designer</p>
-							<ul class="social-list list">
-								<li class="social_item icon-instagram">
-									<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-twitter">
-									<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#twitter"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-facebook">
-									<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social_item icon-linkedin">
-									<a
-										class="link-social"
-										href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
-										aria-label="linkedin"
-									>
-										<svg class="icon-link">
-											<use href="./images_svg/sprite.svg#linkedin"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
+			<section class="our_team container">
+				<!-- <div class="our_team__block"> -->
+					<h2 class="our_team__title">Наша команда</h2>
+					<div class="container">
+						<ul class="our_team__list list">
+							<li class="our_team__item">
+								<picture class="our_team__img">
+									<source
+										srcset="./images/team/demjanenko.webp x1, ./images/team/demjanenko-@2x.webp x2"
+										media="(min-width: 1200px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/demjanenko.jpg x1, ./images/team/demjanenko-@2x.jpg x2"
+										media="(min-width: 1200px)"
+									/>
+									<source
+										srcset="./images/team/demjanenko.webp x1, ./images/team/demjanenko-@2x.webp x2"
+										media="(min-width: 768px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/demjanenko.jpg x1, ./images/team/demjanenko-@2x.jpg x2"
+										media="(min-width: 768px)"
+									/>
+
+									<source
+										srcset="./images/team/demjanenko.webp x1, ./images/team/demjanenko-@2x.webp x2"
+										media="(min-width: 480px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/demjanenko.jpg x1, ./images/team/demjanenko-@2x.jpg x2"
+										media="(min-width: 480px)"
+									/>
+									<img class="our_team__img" src="./images/team/demjanenko.jpg" alt="Игорь Демьяненко (фото)" />
+								</picture>
+								<h3 class="our_team__person">Игорь Демьяненко</h3>
+								<p class="our_team__profession" lang="en">Product Designer</p>
+								<ul class="social-list list">
+									<li class="social_item icon-instagram">
+										<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-twitter">
+										<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-facebook">
+										<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-linkedin">
+										<a
+											class="link-social"
+											href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
+											aria-label="linkedin"
+										>
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="our_team__item">
+								<picture class="our_team__img">
+									<source
+										srcset="./images/team/repina.webp x1, ./images/team/repina-@2x.webp x2"
+										media="(min-width: 1200px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/repina.jpg x1, ./images/team/repina-@2x.jpg x2"
+										media="(min-width: 1200px)"
+									/>
+									<source
+										srcset="./images/team/repina.webp x1, ./images/team/repina-@2x.webp x2"
+										media="(min-width: 768px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/repina.jpg x1, ./images/team/repina-@2x.jpg x2"
+										media="(min-width: 768px)"
+									/>
+
+									<source
+										srcset="./images/team/repina.webp x1, ./images/team/repina-@2x.webp x2"
+										media="(min-width: 480px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/repina.jpg x1, ./images/team/repina-@2x.jpg x2"
+										media="(min-width: 480px)"
+									/>
+									<img class="our_team__img" src="./images/team/repina.jpg" alt="Ольга Репина (фото)" />
+								</picture>
+
+								<h3 class="our_team__person">Ольга Репина</h3>
+								<p class="our_team__profession" lang="en">Frontend Developer</p>
+								<ul class="social-list list">
+									<li class="social_item icon-instagram">
+										<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-twitter">
+										<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-facebook">
+										<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-linkedin">
+										<a
+											class="link-social"
+											href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
+											aria-label="linkedin"
+										>
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="our_team__item">
+								<picture class="our_team__img">
+									<source
+										srcset="./images/team/tarasov.webp x1, ./images/team/tarasov-@2x.webp x2"
+										media="(min-width: 1200px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/tarasov.jpg x1, ./images/team/tarasov-@2x.jpg x2"
+										media="(min-width: 1200px)"
+									/>
+									<source
+										srcset="./images/team/tarasov.webp x1, ./images/team/tarasov-@2x.webp x2"
+										media="(min-width: 768px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/tarasov.jpg x1, ./images/team/tarasov-@2x.jpg x2"
+										media="(min-width: 768px)"
+									/>
+
+									<source
+										srcset="./images/team/tarasov.webp x1, ./images/team/tarasov-@2x.webp x2"
+										media="(min-width: 480px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/tarasov.jpg x1, ./images/team/tarasov-@2x.jpg x2"
+										media="(min-width: 480px)"
+									/>
+									<img class="our_team__img" src="./images/team/tarasov.jpg" alt="Николай Тарасов (фото)" />
+								</picture>
+								<h3 class="our_team__person">Николай Тарасов</h3>
+								<p class="our_team__profession" lang="en">Marketing</p>
+								<ul class="social-list list">
+									<li class="social_item icon-instagram">
+										<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-twitter">
+										<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-facebook">
+										<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-linkedin">
+										<a
+											class="link-social"
+											href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
+											aria-label="linkedin"
+										>
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="our_team__item">
+								<picture class="our_team__img">
+									<source
+										srcset="./images/team/ermakov.webp x1, ./images/team/ermakov-@2x.webp x2"
+										media="(min-width: 1200px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/ermakov.jpg x1, ./images/team/ermakov-@2x.jpg x2"
+										media="(min-width: 1200px)"
+									/>
+									<source
+										srcset="./images/team/ermakov.webp x1, ./images/team/ermakov-@2x.webp x2"
+										media="(min-width: 768px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/ermakov.jpg x1, ./images/team/ermakov-@2x.jpg x2"
+										media="(min-width: 768px)"
+									/>
+
+									<source
+										srcset="./images/team/ermakov.webp x1, ./images/team/ermakov-@2x.webp x2"
+										media="(min-width: 480px)"
+										type="image/webp"
+									/>
+									<source
+										srcset="./images/team/ermakov.jpg x1, ./images/team/ermakov-@2x.jpg x2"
+										media="(min-width: 480px)"
+									/>
+									<img class="our_team__img" src="./images/team/ermakov.jpg" alt="Михаил Ермаков (фото)" />
+								</picture>
+								<h3 class="our_team__person">Михаил Ермаков</h3>
+								<p class="our_team__profession" lang="en">UI Designer</p>
+								<ul class="social-list list">
+									<li class="social_item icon-instagram">
+										<a class="link-social" href="https://www.instagram.com/" aria-label="instagram">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-twitter">
+										<a class="link-social" href="https://twitter.com/?lang=ru" aria-label="twitter">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-facebook">
+										<a class="link-social" href="https://www.facebook.com/" aria-label="facebook">
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="social_item icon-linkedin">
+										<a
+											class="link-social"
+											href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFQU4GR1DfptQAAAXaBrENY4tUHcgxnQT-7zcfJdnDuVNA3asmFvfvqSu0NkFpVjfwIOHPbWcX_E11xOpwyYZSCx-Q_JW-6I7pPxdfFWjn7p-mJKkLdEw6dqwgr5nu7y8K1pEQ=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fru.linkedin.com%2F"
+											aria-label="linkedin"
+										>
+											<svg class="icon-link">
+												<use href="./images_svg/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 			<!--Постоянные клиенты-->
-			<section class="clients">
+			<!-- <section class="clients">
 				<div class="container">
 					<h2 class="clients__title">Постоянные клиенты</h2>
 					<ul class="clients__list list">
@@ -349,10 +507,10 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		<!--Footer-->
-		<footer class="footer">
+		<!-- <footer class="footer">
 			<div class="container footer1">
 				<div class="footer2">
 					<a class="logo link" href="/" lang="en">
@@ -419,8 +577,8 @@
 					</form>
 				</div>
 			</div>
-		</footer>
-		<div class="backdrop is-hidden" data-modal>
+		</footer> -->
+		<!-- <div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button type="button" class="btn-close" data-modal-close>
 					<svg class="icon-close" width="18" height="18">
@@ -477,7 +635,7 @@
 					<button type="submit" class="modal-form__btn">Отправить</button>
 				</form>
 			</div>
-		</div>
+		</div> -->
 		<script src="./js/modal.js"></script>
 	</body>
 </html>

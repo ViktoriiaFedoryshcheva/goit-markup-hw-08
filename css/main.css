@@ -53,9 +53,27 @@ body {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .header .logo {
@@ -251,55 +269,86 @@ body {
 }
 
 .hero {
-  min-height: 600px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
+  padding: 118px 0;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg-mobile.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #2f303a;
+  background-position: center top;
+  background-size: 480px 400px;
 }
 
 .hero__title {
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding-top: 200px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 118px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg-tablet.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg.jpg);
+    background-size: cover;
+  }
+  .hero__title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/bg@2x.jpg);
+  }
 }
 
 .features {
-  padding-top: 94px;
-}
-
-.features__list {
-  display: flex;
-  align-items: center;
+  padding-top: 60px;
 }
 
 .features__list__item {
   display: block;
-  width: 270px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-.features__list__item:not(:last-child) {
-  margin-right: 30px;
+.features__list__item:last-child {
+  margin-bottom: 0;
 }
 
 .features__item-pic {
   display: block;
-  padding: 25px 100px;
+  padding: 25px 190px;
   /* content: ""; */
   height: 120px;
   margin-bottom: 30px;
-  /* background-size: 70px;
-	background-repeat: no-repeat;
-	background-position: center; */
   background-color: #f5f4fa;
   border-radius: 4px;
   justify-content: center;
@@ -317,6 +366,7 @@ body {
   font-weight: 700;
   line-height: 1.143;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: #212121;
 }
@@ -328,6 +378,59 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+  }
+  .features__list__item {
+    display: block;
+    flex-basis: 354px;
+  }
+  .features__list__item:nth-child(n + 3) {
+    margin-bottom: 0;
+  }
+  .features__item-pic {
+    padding: 25px 142px;
+  }
+  .features__item-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+  }
+  .features__list {
+    display: flex;
+    align-items: flex-start;
+  }
+  .features__list__item {
+    display: block;
+    flex-basis: 270px;
+    margin-bottom: 0px;
+  }
+  .features__list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .features__item-pic {
+    padding: 25px 100px;
+  }
+  .features__item-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .about {
+    display: none;
+  }
 }
 
 .about {
@@ -381,53 +484,64 @@ body {
 }
 
 .our_team {
-  /* margin-top: 94px; */
-  background: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 60px 15px;
+  background-color: #f5f4fa;
 }
 
 .our_team__title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.167;
+  line-height: 1.179;
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .our_team__list {
-  display: flex;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .our_team__item {
   display: block;
-  flex-basis: calc((100%-90) / 4);
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .our_team__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-.our_team__person, .our_team__profession {
+.our_team__img {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.our_team__person {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.1875;
   letter-spacing: 0.03em;
-  /* identical to box height */
   color: #212121;
-  margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .our_team__profession {
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
   color: #757575;
-  margin-top: 10px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .clients {

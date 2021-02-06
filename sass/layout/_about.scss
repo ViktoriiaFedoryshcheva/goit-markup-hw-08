@@ -1,3 +1,9 @@
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+	.about {
+		display: none;
+	}
+}
+
 .about {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -7,11 +13,6 @@
 
 .about__title {
 	@include font(36px, 700, 1.167, 0.03em);
-	// font-weight: 700;
-	// font-size: 36px;
-	// line-height: 1.167;
-	// letter-spacing: 0.03em;
-
 	text-align: center;
 	color: #212121;
 }
@@ -41,15 +42,9 @@
 	background-color: rgba(47, 48, 58, 0.8);
 
 	@include font(14px, 700, 1.143, 0.03em);
-	// font-weight: 700;
-	// font-size: 14px;
-	// line-height: 1.143;
-	// letter-spacing: 0.03em;
 	text-align: center;
 	text-transform: uppercase;
-
 	color: #ffffff;
-
 	position: absolute;
 	bottom: 0;
 }
