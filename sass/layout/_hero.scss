@@ -1,7 +1,7 @@
 .hero {
 	padding: 118px 0;
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-		url(/images/hero/bg-mobile.jpg);
+		url(./images/hero/bg-mobile.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 480px 400px;
@@ -21,7 +21,7 @@
 	screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
 	.hero {
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(/images/hero/bg-mobile@2x.jpg);
+			url(./images/hero/bg-mobile@2x.jpg);
 	}
 }
 
@@ -29,7 +29,7 @@
 	.hero {
 		padding: 118px 0;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(/images/hero/bg-tablet.jpg);
+			url(./images/hero/bg-tablet.jpg);
 		background-size: cover;
 	}
 }
@@ -39,7 +39,7 @@
 	screen and (min-resolution: 2dppx) and (min-width: 768px) {
 	.hero {
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(/images/hero/bg-tablet@2x.jpg);
+			url(./images/hero/bg-tablet@2x.jpg);
 	}
 }
 
